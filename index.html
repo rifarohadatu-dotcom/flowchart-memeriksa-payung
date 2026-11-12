@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flowchart Memeriksa Payung</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef4fb;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #173b68;
+}
+
+p {
+    color: #52677e;
+}
+
+svg {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #0002;
+}
+
+text {
+    font-size: 17px;
+    font-weight: bold;
+    fill: #173b68;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.line {
+    stroke: #2878bd;
+    stroke-width: 3;
+    fill: none;
+}
+
+.process {
+    fill: #dceeff;
+    stroke: #2878bd;
+    stroke-width: 3;
+}
+
+.decision {
+    fill: #fff0b8;
+    stroke: #d69a00;
+    stroke-width: 3;
+}
+
+.terminal {
+    fill: #2878bd;
+    stroke: #174b7a;
+    stroke-width: 3;
+}
+
+.white {
+    fill: white;
+}
+
+.label {
+    font-size: 16px;
+    fill: #d16b00;
+}
+</style>
+</head>
+
+<body>
+
+<h2>FLOWCHART MEMERIKSA PAYUNG</h2>
+<p>Sebelum Berangkat ke Sekolah atau Kerja</p>
+
+<svg viewBox="0 0 800 1100">
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10"
+refX="8" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 Z" fill="#2878bd"/>
+</marker>
+</defs>
+
+<!-- MULAI -->
+<ellipse class="terminal" cx="400" cy="55"
+rx="95" ry="32"/>
+<text class="white" x="400" y="55">MULAI</text>
+
+<!-- Panah -->
+<path class="line" d="M400 87 V135"
+marker-end="url(#arrow)"/>
+
+<!-- Proses -->
+<rect class="process" x="275" y="140"
+width="250" height="75" rx="5"/>
+<text x="400" y="177">Periksa prakiraan cuaca</text>
+
+<path class="line" d="M400 215 V270"
+marker-end="url(#arrow)"/>
+
+<!-- Keputusan 1 -->
+<polygon class="decision"
+points="400,275 535,345 400,415 265,345"/>
+<text x="400" y="345">Apakah diperkirakan</text>
+<text x="400" y="370">hujan?</text>
+
+<!-- Cabang Tidak -->
+<path class="line" d="M265 345 H125 V475"
+marker-end="url(#arrow)"/>
+<text class="label" x="180" y="330">TIDAK</text>
+
+<rect class="process" x="15" y="480"
+width="220" height="75" rx="5"/>
+<text x="125" y="518">Tidak perlu membawa</text>
+<text x="125" y="540">payung</text>
+
+<path class="line" d="M125 555 V980"
+marker-end="url(#arrow)"/>
+
+<!-- Cabang Ya -->
+<path class="line" d="M535 345 H675 V475"
+marker-end="url(#arrow)"/>
+<text class="label" x="610" y="330">YA</text>
+
+<rect class="process" x="555" y="480"
+width="240" height="75" rx="5"/>
+<text x="675" y="518">Periksa kondisi payung</text>
+
+<path class="line" d="M675 555 V610"
+marker-end="url(#arrow)"/>
+
+<!-- Keputusan 2 -->
+<polygon class="decision"
+points="675,615 790,680 675,745 560,680"/>
+<text x="675" y="680">Apakah payung</text>
+<text x="675" y="704">masih layak?</text>
+
+<!-- Ya -->
+<path class="line" d="M560 680 H440 V790"
+marker-end="url(#arrow)"/>
+<text class="label" x="490" y="665">YA</text>
+
+<rect class="process" x="335" y="795"
+width="210" height="65" rx="5"/>
+<text x="440" y="827">Bawa payung</text>
+
+<path class="line" d="M440 860 V980"
+marker-end="url(#arrow)"/>
+
+<!-- Tidak -->
+<path class="line" d="M790 680 H770 V790"
+marker-end="url(#arrow)"/>
+<text class="label" x="770" y="665">TIDAK</text>
+
+<rect class="process" x="610" y="795"
+width="185" height="85" rx="5"/>
+<text x="702" y="825">Perbaiki atau cari</text>
+<text x="702" y="850">payung pengganti</text>
+
+<path class="line" d="M702 880 V910"
+marker-end="url(#arrow)"/>
+
+<rect class="process" x="610" y="915"
+width="185" height="55" rx="5"/>
+<text x="702" y="943">Bawa payung</text>
+
+<path class="line" d="M702 970 V995 H440 V980"
+marker-end="url(#arrow)"/>
+
+<!-- Selesai -->
+<ellipse class="terminal" cx="400" cy="1025"
+rx="105" ry="35"/>
+<text class="white" x="400" y="1025">SELESAI</text>
+
+</svg>
+
+</body>
+  </html>
